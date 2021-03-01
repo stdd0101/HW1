@@ -48,8 +48,9 @@ public class Person {
     }
 
     public PersonBuilder newChildBuilder() {
-        this.name = name;
-        return PersonBuilder;
+        PersonBuilder childBuilder = new PersonBuilder();
+        childBuilder.setSurname(this.surname);
+        return childBuilder;
     }
 
     @Override

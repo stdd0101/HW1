@@ -3,15 +3,11 @@ public class PersonBuilder {
     private String surname;
     private int age;
     private String address;
-    private Person Person;
+    private Person person;
 
 
     public Person build() {
-        this.setName(name);
-        this.setSurname(surname);
-        this.setAge(age);
-        this.setAddress(address);
-        return Person;
+        return this.person = new Person(this.name, this.surname, this.age, this.address);
     }
 
     public PersonBuilder setName(String name) {
