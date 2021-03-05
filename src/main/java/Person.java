@@ -50,6 +50,8 @@ public class Person {
     public PersonBuilder newChildBuilder() {
         PersonBuilder childBuilder = new PersonBuilder();
         childBuilder.setSurname(this.surname);
+        childBuilder.setAddress(this.address);
+        childBuilder.setAge(0);
         return childBuilder;
     }
 

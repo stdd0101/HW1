@@ -6,7 +6,13 @@ public class PersonBuilder {
     private Person person;
 
 
-    public Person build() {
+    public Person build() throws IllegalStateException, IllegalArgumentException {
+        if(this.age < 0 || this.address == null) {
+            throw new IllegalArgumentException("Invalid argument");
+        }
+        if(this.name == null || this.surname == null) {
+            throw new IllegalStateException("Not enough arguments");
+        }
         return this.person = new Person(this.name, this.surname, this.age, this.address);
     }
 
